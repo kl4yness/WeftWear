@@ -1,0 +1,182 @@
+@font-face {
+    font-family: Benzin;
+    src: url(../fonts/Benzin-Medium.woff2);
+}
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+body {
+    font-family: Benzin;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    color: #fff;
+    background: url(../imgs/backgorund.png);
+    background-size: cover;
+    background-position: top;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+    font-weight: 600;
+    text-wrap: balance;
+}
+
+:where(h1, h2, h3) {
+    line-height: 1.1;
+}
+
+.title:not(h3){
+    text-align: center;
+}
+
+h1 {   font-size: clamp(3.1875rem, 1.7596rem + 6.3462vw, 9.375rem);}
+h2 {font-size: clamp(2.5rem, 1.6346rem + 3.8462vw, 6.25rem); }
+h3 { font-size: clamp(0.875rem, 0.4279rem + 1.9872vw, 2.8125rem); }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1.125rem; }
+
+p {
+    --paragraphMarginBottom: 1rem;
+    margin-block: 0;
+    margin-bottom: var(--paragraphMarginBottom);
+}
+
+p:where(:not([class]):not(:last-child)) {
+    margin-bottom: var(--paragraphMarginBottom);
+}
+
+:where(ul, ol) {
+    list-style: none;
+    padding-left: 0;
+    margin-block: 0;
+}
+
+:where(table) {
+    border-collapse: collapse;
+    border-color: currentColor;
+    width: 100%;
+}
+
+td, th {
+    text-align: left;
+    padding: 0;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+input,
+textarea,
+select,
+button {
+    font: inherit;
+    margin: 0;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+[aria-hidden="true"] {
+    visibility: hidden;
+}
+iframe {
+    border: 0;
+}
+
+svg *[fill]:not([fill="none"], [fill^="url"]),
+svg *[stroke]:not([stroke="none"], [stroke^="url"]) {
+    fill: currentColor;
+    stroke: currentColor;
+}
+
+svg * {
+    transition-property: fill, stroke;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+hr {
+    border: none;
+    border-top: 4px solid #ddd;
+    margin: 1.5rem 0;
+}
+
+fieldset,
+:where(fieldset[class]) {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+address,
+:where(address[class]) {
+    font-style: normal;
+}
+
+:where(blockquote, figure):where([class]),
+:where(blockquote, figure) {
+    margin: 0;
+}
+
+:where(dd[class]) {
+    margin-left: 0;
+}
+
+dd {
+    margin-left: 0;
+}
+
+:where(:target) {
+    scroll-margin-top: 1em; 
+} 
